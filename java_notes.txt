@@ -1,0 +1,42 @@
+sleep(): 
+	blocking operation that locks shared objects. Used for polling.
+
+wait(): 
+	simply pauses thread; used in conjunction with notify()/notifyAll() for synchronization.
+
+volatile keyword: 
+	guarantees the variable's current value will be read, instead of a cached value. This is used when multiple threads have access to the same variable.
+	A common usage of volatile is setting a flag for terminating a thread, so you can be sure the thread has the current value without having to use a synchronization block.
+	
+What is an abstract class?
+	A class that can contain an abstract method (a method that only has its method signature, no implementation, no curly braces).
+
+When to use an abstract class?
+	When concrete classes need to inherit fields and methods of a more generic form of itself. Animal -> Dog
+
+What is an interface?
+	An interface is a type that can be satisfied by any class that implements it. It's not a class.
+
+When to use interface?
+	An interface useful for establishing necessary methods for a class. Interfaces are also useful as substitutes for multiple inheritance.
+	
+Abstract class vs interface:
+	Abstract classes can have implementation code while interfaces cannot.
+	Abstract classes are better than interfaces when you need:
+		- stronger relationship or a parent/child relationship
+		- to declare non-public members
+		- you think the abstract class will need methods in future
+	
+	Interfaces are better when:
+		- relationship doesn't need to be as strong. House implements AirConditioning.
+		- when the API will not change for a while
+		- when you want something similar to multiple inheritance	
+		
+Method overloading:
+	When there are multiple methods of the same name but different parameter types or number of parameters or different order parameters.
+	overloading happens at compile time.
+	
+Method overriding: 
+	A child class overrides a method definition of its parent.
+	Overriding happens at runtime.
+	
