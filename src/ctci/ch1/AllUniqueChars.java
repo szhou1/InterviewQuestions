@@ -14,6 +14,11 @@ import org.junit.Test;
 public class AllUniqueChars {
 	
 	public boolean allUnique(String s) {
+		
+		if(s.length() > 128) {
+			return false;
+		}
+		
 		HashMap<Character, Boolean> map = new HashMap<Character, Boolean>();
 		for(int i = 0; i < s.length(); i++) {
 			if(map.containsKey(s.charAt(i))) {
