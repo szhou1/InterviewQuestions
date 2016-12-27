@@ -1,9 +1,10 @@
 package sedgwickwayne.ch1_fundamentals;
 
 /**
- * Lazy approach algorithm that joins data sets together by creating trees for each connected component
+ * Lazy approach algorithm that improves the QuickFind algorithm by creating trees for each connected component
  * Runtime to union N elements: O(n)
  * Worst case to find: O(n)
+ * This algorithm is still too slow and trees can get very tall thus find O(n)
  * @author szhou
  *
  */
