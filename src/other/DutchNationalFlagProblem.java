@@ -11,20 +11,50 @@ Output = {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2}
  *
  */
 public class DutchNationalFlagProblem {
-    
-    private int [] arr;
-    
-    public DutchNationalFlagProblem(int [] arr) {
+
+    private int[] arr;
+
+    public DutchNationalFlagProblem(int[] arr) {
         this.arr = arr;
     }
-    
-    public int [] sort() {
+
+    public int[] sort() {
         int top = 0;
-        int mid = 0;
-        int bot = arr.length;
-        
-        
-        
+        int j = 0;
+        int bot = arr.length - 1;
+        int mid = 1;
+
+        while (j <= bot) {
+            if (arr[j] < mid) {
+                int temp = arr[top];
+                arr[top] = arr[j];
+                arr[j] = temp;
+                top++;
+                j++;
+            } else if (arr[j] > mid) {
+                int temp = arr[bot];
+                arr[bot] = arr[j];
+                arr[j] = temp;
+                bot--;
+            } else {
+                j++;
+            }
+        }
+
         return arr;
+    }
+
+    public static void main(String[] args) {
+
+        int[] arr = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 };
+
+        DutchNationalFlagProblem d = new DutchNationalFlagProblem(arr);
+
+        arr = d.sort();
+        
+        for (int i : arr) {
+            System.out.println(i + " ");
+        }
+
     }
 }
