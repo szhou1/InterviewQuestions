@@ -1,4 +1,4 @@
-package ctci.ch1;
+package ctci.ch1_arraysstrings;
 
 import static org.junit.Assert.*;
 
