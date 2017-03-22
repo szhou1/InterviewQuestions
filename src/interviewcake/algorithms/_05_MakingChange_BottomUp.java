@@ -34,4 +34,16 @@ public class _05_MakingChange_BottomUp {
         assertEquals(4, makeChange(6, denom));
         
     }
+//
+//    @Test
+//    public void test1() {
+//        int [] denom = new int []{1, 2, 3};
+//        assertEquals(1, makeChange(0, denom));
+//        assertEquals(1, makeChange(1, denom));
+//        assertEquals(2, makeChange(2, denom));
+//        assertEquals(3, makeChange(5, denom));
+//        assertEquals(4, makeChange(6, denom));
+//        
+//    }
+
 }
